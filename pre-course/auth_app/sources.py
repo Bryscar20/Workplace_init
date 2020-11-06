@@ -5,4 +5,5 @@ url = "https://api.nasa.gov/planetary/apod?api_key=I5zlMkrXLLvEXm3MFi0F7kZN00sVS
 
 
 data = requests.get(url)
-print(data.text, end='\n')
+# print(data.text, end='\n')
+data = json.load(data)
