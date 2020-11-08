@@ -1,13 +1,11 @@
 from flask import Flask, render_template
 import requests
+import json
 
 app = Flask(__name__)
 
-url = "https://api.nasa.gov/planetary/apod?api_key=I5zlMkrXLLvEXm3MFi0F7kZN00sVSTnnVIt0AqIz"
-
-data = requests.get(url)
-new_datas = data.json()
-datas = {new_datas}
+with open("sources.json") as data:
+    datas = json.load(data)
 
 @app.route('/')
 def hello_world():
