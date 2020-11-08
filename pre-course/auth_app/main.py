@@ -4,8 +4,8 @@ import json
 
 app = Flask(__name__)
 
-with open("sources.json") as data:
-    datas = json.load(data)
+with open("sources.json") as datas:
+    datas = datas
 
 @app.route('/')
 def hello_world():
