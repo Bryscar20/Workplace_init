@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for data in datas %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="profile.html">{{ datas.copyright }}</a>
-              <small class="text-muted">{{ datas.date }}</small>
+    <section id="content" class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>{{ n_data.overview }}</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta nulla. </p>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta nulla. </p>
+                </div>
             </div>
-            <h2><a class="article-title" href="#">{{ datas.title }}</a></h2>
-            <p class="article-content">{{ datas.explanation }}</p>
-          </div>
-        </article>
-    {% endfor %}
-{% endblock content %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,22 +1,12 @@
 import json
+import requests
 
-items = []
-with open("sources.json", "r") as f:
-    for data in f:
-        print(type(data))
+url_api = "https://api.themoviedb.org/3/movie/550?api_key=4c20948fcb0bf4dd17dfd9e4b05423bc"
 
 
-# import json
-# import requests
+data  = requests.get(url_api)
 
-# url = "https://api.nasa.gov/DONKI/FLR?startDate=2000-01-01&endDate=2020-08-30&api_key=jO8sNqmLfQRsNK7I2G8AEp64gVn9n4QoQaVmoUh3"
+n_Data = json.loads(data.text)
+print(n_Data["overview"])
 
 
-# data  = requests.get(url)
-
-# json_strings = data.json()
-
-# # json_string = json.dumps(json_strings, indent=2)
-# final_dictionary = json.loads(json_strings) 
-# json_string = final_dictionary
-# print(type(json_string))
