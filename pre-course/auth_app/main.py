@@ -19,28 +19,15 @@ def hello_world():
 
 @app.route("/login",methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
-        uname = request.form["uname"]
-        passw = request.form["passw"]
-        
-        login = user.query.filter_by(username=uname, password=passw).first()
-        if login is not None:
-            return redirect(url_for("index"))
     return render_template("login.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    if request.method == "POST":
-        uname = request.form['uname']
-        mail = request.form['mail']
-        passw = request.form['passw']
-
-        register = user(username = uname, email = mail, password = passw)
-        db.session.add(register)
-        db.session.commit()
-
-        return redirect(url_for("login"))
     return render_template("register.html")
+    
+@app.route("/about")
+def about():
+    return render_template("about.html")
     
 if __name__ == "__main__":
     db.create_all()

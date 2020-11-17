@@ -2,8 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 html {
   font-size: 62.5%;
+  border: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin: 0;
+  padding: 10.5px;
+  box-sizing: border-box;
 }
+
 body {
+  
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -17,6 +24,7 @@ p {
   font-size: 1.6rem;
   line-height: 1.6;
 }
+
 .button {
   display: inline-block;
   margin-top: 20px;
@@ -84,6 +92,28 @@ p {
   color: #fff;
   text-align: center;
   z-index: 1;
+}
+.slider {
+  width: 300px;
+  height: 500px;
+  overflow-x: scroll;
+}
+.slide {
+  float: left;
+  width: 300px;
+  height: 500px;
+}
+.holder {
+  width: 300%;
+}
+#slide-0 {
+  background-image: url(http://farm8.staticflickr.com/7347/8731666710_34d07e709e_z.jpg);
+}
+#slide-1 {
+  background-image: url(http://farm8.staticflickr.com/7384/8730654121_05bca33388_z.jpg);
+}
+#slide-2 {
+  background-image: url(http://farm8.staticflickr.com/7382/8732044638_9337082fc6_z.jpg);
 }
 .banner h1 {
   font-weight: 800;
