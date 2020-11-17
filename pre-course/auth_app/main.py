@@ -19,16 +19,17 @@ def hello_world():
 
 @app.route("/login",methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    title = "WELCOME - Login to Access your Fav Movies"
+    return render_template("login.html", title=title)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template("register.html")
+    title = "WELCOME - Register to Access your Fav Movies"
+    return render_template("register.html", title="title")
     
 @app.route("/about")
 def about():
     return render_template("about.html")
     
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
