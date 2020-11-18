@@ -1,93 +1,11 @@
 {% extends "layout.html" %}
+{% block title %}
+<title> {{title}} </title>
+{% endblock %}
 {% block homepage %}
-<header class="header-area overlay">
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container">
-            <a href="#" class="navbar-brand">Bryscar- Site</a>
-            
-            <button type="button" class="navbar-toggler" data-toggle="collapsed" data-target="#main-nav">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
-            
-            <div id="main-nav" class=" navbar-collapsed">
-                <ul class="navbar-nav ml-auto">
-                    <li><a href="/" class="nav-item nav-link active">Home</a></li>
-                    <li><a href="about" class="nav-item nav-link">About Us</a></li>
-                    <li class="dropdown">
-                    <a href="#" class="nav-item nav-link" data-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Dropdown Item 1</a>
-                            <a href="#" class="dropdown-item">Dropdown Item 2</a>
-                            <a href="#" class="dropdown-item">Dropdown Item 3</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-item nav-link" data-toggle="dropdown">Portfolio</a>
-                        <div class="dropdown-menu">
-                            <a href="login" class="dropdown-item">Log In</a>
-                            <a href="register" class="dropdown-item">Register</a>
-                        </div>
-                    </li>
-                    <li><a href="#" class="nav-item nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="/uploads/media/default/0001/03/66cf5094908491e69d8187bcf934050a4800b37f.jpeg" style="width:100%">
-          <div class="text">London, Ebgland</div>
-        </div>
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="/uploads/media/default/0001/03/b7d624354d5fa22e38b0ab1f9b905fb08ccc6a05.jpeg" style="width:100%">
-          <div class="text">Sunset in Romania</div>
-        </div>
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="/uploads/media/default/0001/03/5bfad15a7fd24d448a48605baf52655a5bbe5a71.jpeg" style="width:100%">
-          <div class="text">New York, USA</div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br>
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if(n > slides.length) {
-            slideIndex = 1
-          }
-          if(n < 1) {
-            slideIndex = slides.length
-          }
-          for(i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for(i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-        }
-      </script>
-</header>
+<div class="row">
+  <div class="col-9">.col-9</div>
+  <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+</div>
 {% endblock %}

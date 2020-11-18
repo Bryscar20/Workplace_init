@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
+{% block title %}
+<title> {{title}} </title>
+{% endblock %}
 {% block content1 %}
 <main>
     <section id="content" class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-4" >
-                    <img src="https://cdn.vox-cdn.com/thumbor/RYeLhUYZDrwswVaqQjnhL_U9QAY=/0x0:1024x1024/1200x800/filters:focal(431x431:593x593)/cdn.vox-cdn.com/uploads/chorus_image/image/50451007/fsociety.0.jpg" alt="Mr. Robot" style="width:250px;height:250px; border-radius: 5px 5px 5px 5px;">
+                    <img src="https://cdn.vox-cdn.com/thumbor/RYeLhUYZDrwswVaqQjnhL_U9QAY=/0x0:1024x1024/1200x800/filters:focal(431x431:593x593)/cdn.vox-cdn.com/uploads/chorus_image/image/50451007/fsociety.0.jpg" alt="Mr. Robot" style="width:250px;height:250px; border-radius: 5px 5px 5px 5px; align-items: center;">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sint sapiente voluptas est totam quisquam? Sapiente possimus, quae, beatae fugit, vero ipsum ipsam repellendus veritatis harum omnis soluta. Animi, numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, accusamus voluptatibus explicabo commodi eveniet a beatae excepturi repellat odit dolor numquam quaerat autem incidunt. Numquam similique quam qui culpa placeat.</p>
                     <button class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> Read more...</button>
                 </div>
@@ -23,4 +26,7 @@
         </div>
     </section>
 </main>
+{% endblock %}
+{% block footer %}
+
 {% endblock %}
