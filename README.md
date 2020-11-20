@@ -28,3 +28,5 @@ Pre-course work -
 ####################################
 
 5. Bootstrap
+
+-- content layouts and css updates

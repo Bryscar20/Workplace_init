@@ -27,11 +27,6 @@ def about():
 def services():
     title = "WELCOME - Services Page"
     return render_template("services.html", title=title)
-
-@app.route("/services")
-def services():
-    title = "WELCOME - Contact Page"
-    return render_template("services.html", title=title)
     
 if __name__ == "__main__":
     app.run(debug=True)
