@@ -19,6 +19,8 @@ Pre-course work -
 
 --- str to JSON Data format
 
+--- Content generation
+
 ####################################
 
 4. API Calls
