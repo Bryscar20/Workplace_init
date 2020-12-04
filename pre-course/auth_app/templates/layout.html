@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="static/main.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="static/main.css">
@@ -45,18 +46,7 @@
         </header>
     </head>
     <body class="container rounded-lg" style="border: 10px 10px 10px 10px;   background: rgb(238,174,202);background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
-      <div class="container jumbotron p-3 p-md-5 text-white rounded bg-dark">
-        <div>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com//bryson-oscar/dj-bryscar">
-          </iframe>
-        </div>
-        <div>
-          <h1 class="display-4 font-italic">LIFITEQ HOLDINGS LTD</h1>
-          <p class="lead my-3 blockquote text-center">youth owned enterprise whose business is the supply of office stationery, provision of IT services and solutions, supply general consumables and general supplies. We focus on delivering quality at sustainable prices. Our aim is to deliver beyond the expectations. The Lifiteq Holdings team is highly committed and ready to serve, partner with you, helping you achieve your organization goals effectively and with great efficiency.</p>
-          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-        </div>
-      </div>
+          {% block homepage %}{% endblock %}
           {% block content1 %}{% endblock %}
           {% block login %}{% endblock %}
           {% block register %}{% endblock %}
